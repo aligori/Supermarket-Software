@@ -73,7 +73,7 @@ public class PrepareBill {
 	public void show(Stage st) {
 		
 		rwb = new RWBill();
-		//MENUBARI
+		//MENUBAR
         ArrayList<Menu> items = new ArrayList<Menu>();
 		
 		MenuBar menuBar = new MenuBar();
@@ -108,7 +108,7 @@ public class PrepareBill {
 		items.add(pass);
 		items.add(out);
 
-	    menuBar.getMenus().addAll(items);
+	        menuBar.getMenus().addAll(items);
 	    
 		//BUTONAT DHE FIELDET LART
 		Label billno = new Label("Bill No "+(rwb.getBills().size()+1));
@@ -135,14 +135,14 @@ public class PrepareBill {
 		gp.addRow(0, tfname,tfquantity,add,search);
 		gp.setHgap(10);
 		
-		// TABELA
+		// TABLE
 		
 		ObservableList<SoldProduct> products = FXCollections.observableArrayList(billProducts);
 		
 		TableView billTable = new TableView();
 		billTable.setPadding(new Insets(10, 10, 10, 10));
 		
-        TableColumn bc = new TableColumn("Barcode");
+                TableColumn bc = new TableColumn("Barcode");
 		bc.setCellValueFactory(new PropertyValueFactory<>("barcode"));
 		bc.setMinWidth(180);
 		
@@ -165,8 +165,8 @@ public class PrepareBill {
 		//BUTONAT POSHTE	
 		GridPane gp1 = new GridPane();
 		gp1.setPadding(new Insets(10, 10, 10, 10));
-	    gp1.setHgap(200);
-	    gp1.setVgap(10);
+	        gp1.setHgap(200);
+	        gp1.setVgap(10);
 		TextField total = new TextField();
 		total.setText(Integer.toString(totali));
 		total.setEditable(false);
@@ -181,7 +181,7 @@ public class PrepareBill {
 		HBox hb2 = new HBox();
 		hb2.getChildren().addAll(shuma,total,proceed);
 		hb2.setSpacing(5);
-	    hb2.setAlignment(Pos.BASELINE_LEFT);
+	        hb2.setAlignment(Pos.BASELINE_LEFT);
 	    
 		HBox hb3 = new HBox();
 		hb3.setSpacing(10);
@@ -356,7 +356,7 @@ public class PrepareBill {
 		stock.setCellValueFactory(new PropertyValueFactory<>("stock"));
 		
 		TableColumn category=new TableColumn("Category");
-	    category.setCellValueFactory(new PropertyValueFactory<>("category"));
+	        category.setCellValueFactory(new PropertyValueFactory<>("category"));
 		
 		TableColumn suplieri=new TableColumn("Supplier");
 		suplieri.setCellValueFactory(new PropertyValueFactory<>("supplier"));
