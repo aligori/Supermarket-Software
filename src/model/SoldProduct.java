@@ -7,9 +7,9 @@ import java.util.Date;
 public class SoldProduct implements Serializable{
 	private String barcode;
 	private String name;
-    private int quantity;
-    private double sellprice;
-    private MyDate sellDate;
+        private int quantity;
+        private double sellprice;
+        private MyDate sellDate;
 	public SoldProduct(String barcode,String name, int quantity, double sellprice) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		MyDate sellDate = new MyDate(sdf.format(new Date()));
